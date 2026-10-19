@@ -16,7 +16,10 @@ name: iOS build
 # SHA and burn macOS minutes.
 
 on:
+  workflow_dispatch:
   push:
+    branches:
+      - main
 
 concurrency:
   group: ios-build-${{ github.ref }}
